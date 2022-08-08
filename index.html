@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>SWLM Data</title>
+</head>
+<body>
+    <h1 style="text-align: center">SWLM Data</h1>
+    <p style="text-align: center">Welcome to the Satellite Water Level Monitoring landing page! <br> This site is acting as the repository for data collected and created by Paul Lussier and Ian Maloney for their Computer Science Capstone at Wentworth Institute of Technology</p>
+    <h2 style="text-align: center">Abstract</h2>
+    <p style="text-align: center">
+        This research investigates the practicality of utilizing historical satellite imagery data in order to calculate the water levels of key watershed locations in areas that experience heavy droughts and extreme dryness. The satellite data was accessible via the Sentinel-2 Satellite open API and gave access to imagery dating back to 2017. Each image pulled covered an area of 100 km x 100 km . Initial water detection in images was tested with given K-Means and agglomerative clustering (AGC), where AGC gave more consistent results for images of different locations. The classification of clusters was carried out via support vector machine (SVM) algorithm. The final step of processing was then utilizing connected component analysis in order to remove noise from the images, then surface area of the detected water was calculated with the known size of the images. Effectiveness of the algorithms was tested by comparing the calculated surface areas to the available data of known water levels for the watersheds. The results varied between ~70% to ~85% accuracy , and indicate that with more access to consistent historical data to train on , the provided machine learning algorithms in conjunction with image processing techniques can provide accurate water level calculations.
+    </p>
+    <h2 style="text-align: center">Example</h2>
+    <p style="text-align: center">Here is an example of the data we are working with: <br> <br> On the Left is the raw color image captured by the Sentinel 2 satellite. On the right is the result of our image processing which masks the desired water body.</p>
+    <center>
+        <img src='data/Images/fullMono.png'
+         height="400"
+         width="400">
+        <img src='data/Images/88.jpeg'
+         width="400"
+         height="400">
+    </center>
+    <p style="text-align: center"> Fee free to check out the full data along with some tools for exploring the data by clicking the link below:</p>
+    <form style="text-align: center" action=home.php>
+        <input type="submit" value="Click here to see the full data"/>
+    </form>
+</body>
+</html>
